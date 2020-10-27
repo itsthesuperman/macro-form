@@ -1,0 +1,22 @@
+<div style="padding: 13px;">
+  <mat-spinner *ngIf="!loaded"></mat-spinner>
+
+  <mat-card style="margin-top:10px;">
+      <mat-card-header>
+          <mat-card-title>Users</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <button mat-raised-button routerLink="/userForm">Add User</button>
+        </p>
+        <table class="table table-striped">
+          <tr>
+            <th>Name</th><th>Email</th><th></th>
+          </tr>
+          <tr *ngFor="let item of users">
+            <td>{{item.name}}</td><td>{{item.email}}</td><td><button mat-raised-button>Edit</button></td>
+          </tr>
+        </table>
+      </mat-card-content>
+  </mat-card>
+</div>
